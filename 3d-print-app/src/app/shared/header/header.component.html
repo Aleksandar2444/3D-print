@@ -1,0 +1,30 @@
+<section class="navbar-mobile">
+  <button class="menu-btn" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item><a routerLink="/home" routerLinkActive="active">Home</a></button>
+    <button mat-menu-item><a routerLink="/about" routerLinkActive="active">About</a></button>
+    <button mat-menu-item><a routerLink="/materials" routerLinkActive="active">Materials</a></button>
+    <button mat-menu-item><a routerLink="/delivery" routerLinkActive="active">Delivery</a></button>
+    <button mat-menu-item><a routerLink="/contact" routerLinkActive="active">Contact</a></button>
+  </mat-menu>
+
+  <div class="logo-wrapper-mobile">
+    <p>LOGO</p>
+  </div>
+</section>
+
+<section class="navbar-desktop">
+  <div class="logo-wrapper-desktop">
+    <p>LOGO</p>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/materials" routerLinkActive="active">Materials</a></li>
+      <li><a routerLink="/delivery" routerLinkActive="active">Delivery</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </nav>
+</section>

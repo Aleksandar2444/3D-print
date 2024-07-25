@@ -1,0 +1,36 @@
+/* Default styles for mobile devices */
+.about-wrapper {
+  height: 100vh;
+
+  .img-wrapper {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .about-wrapper {
+    .img-wrapper {
+      img {
+        object-fit: fill;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles for small laptops and larger devices */
+}
+
+@media (min-width: 992px) {
+  /* Styles for desktops and larger devices */
+}
+
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+}

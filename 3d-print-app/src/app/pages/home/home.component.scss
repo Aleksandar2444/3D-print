@@ -1,0 +1,37 @@
+
+/* Default styles for mobile devices */
+.home-wrapper {
+  height: 100vh;
+
+  .img-wrapper {
+    height: 100%;
+
+    background-image: url('https://i.pinimg.com/564x/90/b8/9f/90b89fa8dc587828475b112df2e0435d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 600px) {
+  .home-wrapper {
+    .img-wrapper {
+      background-image: url('https://images.unsplash.com/photo-1625014618427-fbc980b974f5?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles for small laptops and larger devices */
+}
+
+@media (min-width: 992px) {
+  /* Styles for desktops and larger devices */
+}
+
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+}

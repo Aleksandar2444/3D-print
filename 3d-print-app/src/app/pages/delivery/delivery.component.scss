@@ -1,0 +1,35 @@
+/* Default styles for mobile devices */
+.delivery-wrapper {
+  height: 100vh;
+
+  .img-wrapper {
+    height: 100%;
+    background-image: url('/assets/images/delivery.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 600px) {
+  .delivery-wrapper {
+    .img-wrapper {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/005/021/066/non_2x/fast-delivery-man-with-motorcycles-customers-ordering-on-mobile-application-the-motorcyclist-goes-according-to-the-gps-map-the-background-is-blue-and-gray-with-buildings-and-trees-vector.jpg');
+      background-size: cover;
+      background-position: inherit;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles for small laptops and larger devices */
+}
+
+@media (min-width: 992px) {
+  /* Styles for desktops and larger devices */
+}
+
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+}
