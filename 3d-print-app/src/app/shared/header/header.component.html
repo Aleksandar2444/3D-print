@@ -1,4 +1,4 @@
-<section class="navbar-mobile">
+<!-- <section class="navbar-mobile">
   <button class="menu-btn" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item><a routerLink="/home" routerLinkActive="active">Home</a></button>
@@ -27,4 +27,35 @@
       <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
     </ul>
   </nav>
-</section>
+</section> -->
+
+<mat-toolbar class="header-wrapper">
+  <div class="logo-wrapper">
+    <img src="path/to/logo.png" alt="Company Logo" class="logo">
+  </div>
+
+  <!-- Mobile View -->
+  <button class="menu-btn" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Desktop View -->
+  <nav class="desktop-nav">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/materials" routerLinkActive="active">Materials</a>
+    <a routerLink="/delivery" routerLinkActive="active">Delivery</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <a routerLink="/home" routerLinkActive="active" (click)="drawer.toggle()">Home</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="drawer.toggle()">About</a>
+    <a routerLink="/materials" routerLinkActive="active" (click)="drawer.toggle()">Materials</a>
+    <a routerLink="/delivery" routerLinkActive="active" (click)="drawer.toggle()">Delivery</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="drawer.toggle()">Contact</a>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>

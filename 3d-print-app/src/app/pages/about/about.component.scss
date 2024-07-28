@@ -1,36 +1,167 @@
-/* Default styles for mobile devices */
+// /* Default styles for mobile devices */
+// .about-wrapper {
+//   height: 100vh;
+
+//   .img-wrapper {
+//     height: 100%;
+
+//     img {
+//       width: 100%;
+//       height: inherit;
+//       object-fit: cover;
+//     }
+//   }
+// }
+
+// @media (min-width: 600px) {
+//   .about-wrapper {
+//     .img-wrapper {
+//       img {
+//         object-fit: fill;
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   /* Styles for small laptops and larger devices */
+// }
+
+// @media (min-width: 992px) {
+//   /* Styles for desktops and larger devices */
+// }
+
+// @media (min-width: 1200px) {
+//   /* Styles for large desktops */
+// }
+
 .about-wrapper {
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
 
-  .img-wrapper {
-    height: 100%;
+  .about-intro {
+    background: #007acc;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 
-    img {
-      width: 100%;
-      height: inherit;
-      object-fit: cover;
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 20px;
     }
   }
-}
 
-@media (min-width: 600px) {
-  .about-wrapper {
-    .img-wrapper {
-      img {
-        object-fit: fill;
+  .about-details {
+    .about-mission,
+    .about-vision,
+    .about-team,
+    .about-values,
+    .about-history {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1em;
+        color: #555;
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-  /* Styles for small laptops and larger devices */
-}
+  @media (min-width: 600px) {
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-@media (min-width: 992px) {
-  /* Styles for desktops and larger devices */
-}
+      .about-mission,
+      .about-vision,
+      .about-team,
+      .about-values,
+      .about-history {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  }
 
-@media (min-width: 1200px) {
-  /* Styles for large desktops */
+  @media (min-width: 768px) {
+    .about-intro {
+      padding: 60px 30px;
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+
+    .about-details {
+      .about-mission,
+      .about-vision,
+      .about-team,
+      .about-values,
+      .about-history {
+        width: 60%;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .about-details {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .about-mission,
+      .about-vision,
+      .about-team,
+      .about-values,
+      .about-history {
+        width: 30%;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .about-intro {
+      padding: 80px 40px;
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+
+    .about-details {
+      .about-mission,
+      .about-vision,
+      .about-team,
+      .about-values,
+      .about-history {
+        width: 28%;
+      }
+    }
+  }
 }

@@ -1,96 +1,212 @@
-/* Default styles for mobile devices */
-.navbar-desktop {
-  display: none;
-}
+// /* Default styles for mobile devices */
+// .navbar-desktop {
+//   display: none;
+// }
 
-.navbar-mobile {
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+// .navbar-mobile {
+//   background: rgba(255, 255, 255, 0);
+//   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//   backdrop-filter: blur(5px);
+//   -webkit-backdrop-filter: blur(5px);
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: row-reverse;
+//   position: fixed;
+//   width: 100%;
+
+//   .menu-btn {
+//       padding: 10px;
+//       color: white;
+//   }
+
+//   .logo-wrapper-mobile {
+//     p {
+//       padding: 10px;
+//       margin: 0;
+//       color: white;
+//     }
+//   }
+// }
+
+// @media (min-width: 600px) {
+//   /* Styles for tablets and larger devices */
+//   .navbar-mobile {
+//     display: none;
+//   }
+
+//   .navbar-desktop {
+//     background: rgba(255, 255, 255, 0);
+//     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//     backdrop-filter: blur(5px);
+//     -webkit-backdrop-filter: blur(5px);
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     position: fixed;
+//     width: 100%;
+
+//     .logo-wrapper-desktop {
+//       p {
+//         padding: 18px 132px;
+//         font-size: 16px;
+//         margin: 0;
+//         color: white;
+//         font-weight: 600;
+//         text-transform: uppercase;
+//       }
+//     }
+
+//     nav {
+//       ul {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         gap: 34px;
+//         padding: 18px 132px;
+//         margin: 0;
+
+//         li {
+//           list-style: none;
+
+//           a {
+//             color: white;
+//             text-decoration: none;
+//             font-size: 16px;
+//             font-weight: 600;
+//             text-transform: uppercase;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   /* Styles for small laptops and larger devices */
+// }
+
+// @media (min-width: 992px) {
+//   /* Styles for desktops and larger devices */
+// }
+
+// @media (min-width: 1200px) {
+//   /* Styles for large desktops */
+// }
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+  z-index: 1000; /* Ensure the header is on top of other content */
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
-  position: fixed;
-  width: 100%;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+
+  .logo-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      max-height: 50px; /* Adjust according to your logo size */
+      height: auto;
+    }
+  }
 
   .menu-btn {
-      padding: 10px;
-      color: white;
+    display: block; /* Show hamburger menu on mobile */
   }
 
-  .logo-wrapper-mobile {
-    p {
-      padding: 10px;
-      margin: 0;
-      color: white;
+  .desktop-nav {
+    display: none; /* Hide desktop navigation by default */
+  }
+
+  @media (min-width: 600px) {
+    .menu-btn {
+      display: block; /* Show hamburger menu on small tablets */
     }
   }
-}
 
-@media (min-width: 600px) {
-  /* Styles for tablets and larger devices */
-  .navbar-mobile {
-    display: none;
-  }
-
-  .navbar-desktop {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-
-    .logo-wrapper-desktop {
-      p {
-        padding: 18px 132px;
-        font-size: 16px;
-        margin: 0;
-        color: white;
-        font-weight: 600;
-        text-transform: uppercase;
-      }
+  @media (min-width: 768px) {
+    .menu-btn {
+      display: none; /* Hide hamburger menu on tablets and larger */
     }
 
-    nav {
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 34px;
-        padding: 18px 132px;
-        margin: 0;
+    .desktop-nav {
+      display: flex; /* Show desktop navigation on tablets and larger */
+      flex: 1;
+      justify-content: center;
+      align-items: center;
 
-        li {
-          list-style: none;
+      a {
+        color: #333;
+        text-decoration: none;
+        font-size: 22px;
+        padding: 10px 15px;
+        transition: color 0.3s, background-color 0.3s;
 
-          a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-          }
+        &:hover,
+        &.active {
+          color: #007acc; /* Highlight color */
+          // background-color: #f0f0f0; /* Background color on hover or active */
+          // border-radius: 4px;
         }
       }
     }
   }
+
+  @media (min-width: 992px) {
+    .logo-wrapper .logo {
+      max-height: 60px;
+      margin-left: 4rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .logo-wrapper .logo {
+      max-height: 70px;
+    }
+
+    .desktop-nav a {
+      padding: 10px 20px;
+    }
+  }
 }
 
-@media (min-width: 768px) {
-  /* Styles for small laptops and larger devices */
+.example-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 992px) {
-  /* Styles for desktops and larger devices */
+.example-sidenav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(2px); /* Blur effect */
+  z-index: 2000; /* Ensure the sidenav is on top of other content */
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    width: -webkit-fill-available;
+    text-align: center;
+
+    &:hover,
+    &.active {
+      color: #ffffff; /* Highlight color */
+      background-color: #07456e; /* Background color on hover or active */
+    }
+  }
 }
 
-@media (min-width: 1200px) {
-  /* Styles for large desktops */
-}

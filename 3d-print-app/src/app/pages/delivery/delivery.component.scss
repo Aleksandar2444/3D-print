@@ -1,35 +1,204 @@
-/* Default styles for mobile devices */
+// /* Default styles for mobile devices */
+// .delivery-wrapper {
+//   height: 100vh;
+
+//   .img-wrapper {
+//     height: 100%;
+//     background-image: url('/assets/images/delivery.jpg');
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//   }
+// }
+
+// @media (min-width: 600px) {
+//   .delivery-wrapper {
+//     .img-wrapper {
+//       background-image: url('https://static.vecteezy.com/system/resources/previews/005/021/066/non_2x/fast-delivery-man-with-motorcycles-customers-ordering-on-mobile-application-the-motorcyclist-goes-according-to-the-gps-map-the-background-is-blue-and-gray-with-buildings-and-trees-vector.jpg');
+//       background-size: cover;
+//       background-position: inherit;
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   /* Styles for small laptops and larger devices */
+// }
+
+// @media (min-width: 992px) {
+//   /* Styles for desktops and larger devices */
+// }
+
+// @media (min-width: 1200px) {
+//   /* Styles for large desktops */
+// }
+
 .delivery-wrapper {
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
 
-  .img-wrapper {
-    height: 100%;
-    background-image: url('/assets/images/delivery.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
+  .delivery-intro {
+    background: #007acc;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 
-@media (min-width: 600px) {
-  .delivery-wrapper {
-    .img-wrapper {
-      background-image: url('https://static.vecteezy.com/system/resources/previews/005/021/066/non_2x/fast-delivery-man-with-motorcycles-customers-ordering-on-mobile-application-the-motorcyclist-goes-according-to-the-gps-map-the-background-is-blue-and-gray-with-buildings-and-trees-vector.jpg');
-      background-size: cover;
-      background-position: inherit;
-      background-repeat: no-repeat;
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 20px;
     }
   }
-}
 
-@media (min-width: 768px) {
-  /* Styles for small laptops and larger devices */
-}
+  .delivery-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-@media (min-width: 992px) {
-  /* Styles for desktops and larger devices */
-}
+    .delivery-photo {
+      width: 100%;
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+    }
 
-@media (min-width: 1200px) {
-  /* Styles for large desktops */
+    .delivery-details {
+      .delivery-time,
+      .delivery-places,
+      .delivery-cargo,
+      .delivery-shipping {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        width: 100%;
+
+        h2 {
+          font-size: 1.4em;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1em;
+          color: #555;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .delivery-content {
+      .delivery-photo {
+        img {
+          margin-bottom: 30px;
+        }
+      }
+      .delivery-details {
+        .delivery-time,
+        .delivery-places,
+        .delivery-cargo,
+        .delivery-shipping {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .delivery-intro {
+      padding: 60px 30px;
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+
+    .delivery-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .delivery-photo {
+        width: 48%;
+      }
+
+      .delivery-details {
+        width: 48%;
+
+        .delivery-time,
+        .delivery-places,
+        .delivery-cargo,
+        .delivery-shipping {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .delivery-content {
+      .delivery-photo {
+        width: 48%;
+      }
+
+      .delivery-details {
+        width: 48%;
+
+        .delivery-time,
+        .delivery-places,
+        .delivery-cargo,
+        .delivery-shipping {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .delivery-intro {
+      padding: 80px 40px;
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+
+    .delivery-content {
+      .delivery-photo {
+        width: 45%;
+      }
+
+      .delivery-details {
+        width: 50%;
+
+        .delivery-time,
+        .delivery-places,
+        .delivery-cargo,
+        .delivery-shipping {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
