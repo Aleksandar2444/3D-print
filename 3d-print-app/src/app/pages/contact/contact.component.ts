@@ -5,8 +5,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   selector: 'app-contact',
   standalone: true,
   imports: [
-    FooterComponent
-
+    FooterComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

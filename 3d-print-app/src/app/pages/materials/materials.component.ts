@@ -5,7 +5,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   selector: 'app-materials',
   standalone: true,
   imports: [
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './materials.component.html',
   styleUrl: './materials.component.scss'
