@@ -43,11 +43,8 @@
   margin-top: 60px;
 
   .contact-intro {
-    background: #007acc;
     color: white;
     padding: 40px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
 
     h1 {
       font-size: 1.8em;
@@ -66,12 +63,12 @@
     align-items: center;
 
     .contact-item {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       padding: 20px;
       border-radius: 8px;
-      margin-bottom: 20px;
       width: 100%;
+      margin-bottom: 20px;
       box-sizing: border-box;
 
       h2 {
@@ -81,10 +78,10 @@
 
       p {
         font-size: 1em;
-        color: #555;
+        color: white;
 
         a {
-          color: #007acc;
+          color: white;
           text-decoration: none;
 
           &:hover {
@@ -92,11 +89,20 @@
           }
         }
       }
+
+      .social-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+      }
     }
   }
 
   @media (min-width: 600px) {
     .contact-details {
+      justify-content: space-evenly;
+      align-items: normal;
       .contact-item {
         width: 80%;
       }
@@ -119,7 +125,6 @@
     .contact-details {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
 
       .contact-item {
         width: 48%;
