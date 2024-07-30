@@ -1,36 +1,5 @@
-// /* Default styles for mobile devices */
-// .materials-wrapper {
-//   height: 100vh;
-
-//   .img-wrapper {
-//     height: 100%;
-
-//     img {
-//       width: 100%;
-//       height: inherit;
-//       object-fit: cover;
-//     }
-//   }
-// }
-
-// @media (min-width: 600px) {
-
-// }
-
-// @media (min-width: 768px) {
-//   /* Styles for small laptops and larger devices */
-// }
-
-// @media (min-width: 992px) {
-//   /* Styles for desktops and larger devices */
-// }
-
-// @media (min-width: 1200px) {
-//   /* Styles for large desktops */
-// }
-
+/* Default styles for mobile devices */
 .materials-wrapper {
-  font-family: Arial, sans-serif;
   color: #333;
   padding: 20px;
   text-align: center;
@@ -58,8 +27,7 @@
     align-items: center;
 
     .material-item {
-      background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for features */
-      // border: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.4);
       padding: 20px;
       border-radius: 8px;
@@ -97,6 +65,10 @@
   @media (min-width: 768px) {
     .materials-intro {
       padding: 60px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h1 {
         font-size: 2.2em;
@@ -104,13 +76,15 @@
 
       p {
         font-size: 1.2em;
+        max-width: 800px;
       }
     }
 
     .materials-list {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      align-items: normal;
 
       .material-item {
         width: 48%;
@@ -119,6 +93,7 @@
   }
 
   @media (min-width: 992px) {
+    padding-bottom: 100px;
     .materials-list {
       .material-item {
         width: 30%;
