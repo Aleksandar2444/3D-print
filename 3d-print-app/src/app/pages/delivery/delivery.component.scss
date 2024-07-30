@@ -1,6 +1,5 @@
-// /* Default styles for mobile devices */
+/* Default styles for mobile devices */
 .delivery-wrapper {
-  font-family: Arial, sans-serif;
   color: #333;
   padding: 20px;
   text-align: center;
@@ -31,9 +30,6 @@
       display: flex;
       flex-direction: row;
       img {
-        // display: block;
-        // margin-bottom: 20px;
-
         width: 100px;
         height: 50px;
       }
@@ -63,6 +59,13 @@
         }
       }
     }
+
+    .delivery-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @media (min-width: 600px) {
@@ -86,6 +89,10 @@
   @media (min-width: 768px) {
     .delivery-intro {
       padding: 60px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h1 {
         font-size: 2.2em;
@@ -93,45 +100,46 @@
 
       p {
         font-size: 1.2em;
+        max-width: 800px;
       }
     }
 
     .delivery-content {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
       .delivery-photo {
-        width: 48%;
+        width: 100%;
+        justify-content: center;
       }
 
       .delivery-details {
-        width: 48%;
+        width: 100%;
+        flex-direction: row;
+        align-items: normal;
+        gap: 20px;
+        flex-wrap: wrap;
 
         .delivery-time,
         .delivery-places,
         .delivery-cargo,
         .delivery-shipping {
-          width: 100%;
+          width: 45%;
         }
       }
     }
   }
 
   @media (min-width: 992px) {
+    padding-bottom: 100px;
     .delivery-content {
       .delivery-photo {
         width: 48%;
       }
 
       .delivery-details {
-        width: 48%;
-
         .delivery-time,
         .delivery-places,
         .delivery-cargo,
         .delivery-shipping {
-          width: 100%;
+          width: 45%;
         }
       }
     }
@@ -156,13 +164,11 @@
       }
 
       .delivery-details {
-        width: 50%;
-
         .delivery-time,
         .delivery-places,
         .delivery-cargo,
         .delivery-shipping {
-          width: 100%;
+          width: 40%;
         }
       }
     }

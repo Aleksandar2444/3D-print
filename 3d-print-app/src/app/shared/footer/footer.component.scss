@@ -3,7 +3,6 @@
   color: white;
   padding: 34px;
   text-align: center;
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +33,7 @@
       font-weight: bold;
       transition: background 0.3s;
       margin-bottom: 30px;
+      cursor: pointer;
 
       &:hover {
         background: #e68900;
@@ -73,26 +73,12 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 20px;
+
+        li a:hover {
+          color: #e68900;
+        }
       }
     }
-    // ul {
-    //   list-style: none;
-    //   padding: 0;
-
-    //   li {
-    //     display: inline;
-    //     margin: 0 10px;
-
-    //     a {
-    //       color: #fff;
-    //       text-decoration: none;
-
-    //       &:hover {
-    //         text-decoration: underline;
-    //       }
-    //     }
-    //   }
-    // }
   }
 
   .footer-contact {
@@ -123,15 +109,17 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: normal;
     width: 100%;
 
     a {
       color: #ababab;
       text-decoration: none;
-      margin: 0 5px;
+
+      &:first-child img {
+        height: 50px;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -154,20 +142,27 @@
 
   @media (min-width: 768px) {
     padding: 40px;
-
-    .footer-nav ul li {
-      margin: 0 15px;
-    }
   }
 
   @media (min-width: 992px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
     .footer-logo img {
       max-width: 250px;
     }
 
-    .footer-nav ul li {
-      margin: 0 20px;
+    .left-wrapper {
+      width: 50%;
     }
+
+    .footer-nav {
+      width: 50%;
+      justify-content: flex-end;
+      gap: 80px;
+      flex-direction: row;
+  }
 
     .footer-contact p,
     .footer-social a {
@@ -176,15 +171,15 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 60px;
-
-    .footer-nav ul li {
-      margin: 0 25px;
-    }
+    padding: 60px 120px;
 
     .footer-contact p,
     .footer-social a {
       font-size: 1.2em;
+
+      &:first-child img {
+        height: 50px;
+      }
     }
 
     .footer-copy p {
