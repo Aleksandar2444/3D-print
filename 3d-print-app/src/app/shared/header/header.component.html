@@ -84,6 +84,14 @@
         -6 0 -21 -33 -33 -74z"/>
       </g>
     </svg>
+
+     <!-- Language dropdown menu -->
+     <div class="language-menu-mobile">
+       <select (change)="onLanguageChange($event)">
+        <option value="en">EN</option>
+        <option value="mk">MK</option>
+      </select>
+    </div>
   </div>
 
   <!-- Mobile View -->
@@ -93,12 +101,19 @@
 
   <!-- Desktop View -->
   <nav class="desktop-nav">
-    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/home" routerLinkActive="active">{{ 'HOME' | translate }}</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
     <a routerLink="/materials" routerLinkActive="active">Materials</a>
     <a routerLink="/delivery" routerLinkActive="active">Delivery</a>
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
   </nav>
+
+  <div class="language-menu-desktop">
+    <select (change)="onLanguageChange($event)">
+     <option value="en">EN</option>
+     <option value="mk">MK</option>
+   </select>
+ </div>
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">

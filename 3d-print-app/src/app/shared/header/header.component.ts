@@ -1,11 +1,15 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-header',
@@ -17,17 +21,31 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatMenuModule,
     MatIconModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    TranslateModule,
+    FormsModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  currentLang: string;
+
+  selectedLanguage: string = 'en';
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) { }
+    private translate: TranslateService,
+  ) {
+    this.translate.addLangs(['en', 'mk']);
+    this.translate.setDefaultLang('en');
+    const browserLang = translate.getBrowserLang();
+    this.currentLang = browserLang && (browserLang.match(/en|mk/) ? browserLang : 'en') || 'en';
+    this.translate.use(this.currentLang);
+  }
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
@@ -37,5 +55,14 @@ export class HeaderComponent implements OnInit {
         }
       }
     });
+  }
+
+  switchLanguage(lang: string): void {
+    this.selectedLanguage = lang;
+    this.translate.use(lang);
+  }
+
+  onLanguageChange(event: any): void {
+    this.switchLanguage(event.target.value);
   }
 }
