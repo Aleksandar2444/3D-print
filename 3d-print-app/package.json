@@ -1,6 +1,6 @@
 {
   "name": "3d-print-app",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +23,8 @@
     "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@angular/ssr": "^18.1.1",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "emailjs-com": "^3.2.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",

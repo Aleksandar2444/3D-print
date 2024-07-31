@@ -29,19 +29,51 @@
         fill: black; /* Change the SVG fill to black when drawer is opened */
       }
     }
-  }
 
-  &.drawer-opened {
-    .menu-btn {
-      color: black;
-
-      mat-icon {
-        color: black;
-      }
+    .language-menu-mobile {
+      display: flex;
+      align-items: center;
+      margin-left: auto; /* Pushes the menu to the right */
+      margin-right: 20px;
     }
 
-    .logo-wrapper .logo {
-      fill: black;
+    .language-menu-mobile select {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-size: 16px;
+      padding: 8px;
+      cursor: pointer;
+      outline: none;
+      -webkit-appearance: none; /* Removes default styling on some browsers */
+      appearance: none;
+    }
+
+    .language-menu-mobile::before {
+      content: '🌐'; /* Adds a globe icon or any other icon you prefer */
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      filter: grayscale(100%);
+    }
+
+    /* Styling for options in the dropdown */
+    .language-menu-mobile option {
+      background: #ababab;
+      color: black;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    /* Hover and active states for options */
+    .language-menu-mobile option:hover {
+      background: #ababab;
+      color: #000;
+    }
+
+    .language-menu-mobile option:active {
+      background: #ababab;
+      color: #000;
     }
   }
 
@@ -66,9 +98,21 @@
     display: none;
   }
 
+  .language-menu-desktop {
+    display: none;
+  }
+
   @media (min-width: 600px) {
     .menu-btn {
       display: block;
+    }
+
+    .language-menu-mobile {
+      margin-right: 10px;
+    }
+
+    .language-menu-mobile select {
+      font-size: 14px;
     }
   }
 
@@ -76,6 +120,58 @@
     .menu-btn {
       display: none;
     }
+
+    .language-menu-mobile {
+      display: none !important;
+    }
+
+    .language-menu-desktop {
+      display: block;
+    }
+
+    .language-menu-desktop {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .language-menu-desktop select {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-size: 16px;
+      padding: 8px;
+      cursor: pointer;
+      outline: none;
+      -webkit-appearance: none; /* Removes default styling on some browsers */
+      appearance: none;
+      width: 50px;
+    }
+
+    .language-menu-desktop::before {
+      content: '🌐';
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      filter: grayscale(100%);
+    }
+
+      .language-menu-desktop option {
+        background: #ababab;
+        color: black;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .language-menu-desktop option:hover {
+        background: #ababab;
+        color: #000;
+      }
+
+      .language-menu-desktop option:active {
+        background: #ababab;
+        color: #000;
+      }
 
     .desktop-nav {
       display: flex;
@@ -105,6 +201,10 @@
       max-height: 60px;
       margin-left: 4rem;
     }
+
+    .language-menu-desktop select {
+      width: 80px;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -115,6 +215,10 @@
     .desktop-nav a {
       padding: 10px 20px;
     }
+  }
+
+  .language-menu-desktop select {
+    width: 100px;
   }
 }
 
