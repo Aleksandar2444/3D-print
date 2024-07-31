@@ -1,7 +1,43 @@
 {
   "HOME": "Home",
+  "home_p1": "Your Gateway to High-Quality 3D Printing Services",
+  "home_a-1": "Learn More",
+  "home_h2-1": "Quality Prints",
+  "home_p2": "Experience top-notch 3D printing services with exceptional quality and precision",
+  "home_h2-2": "Custom Solutions",
+  "home_p3": "Get customized 3D printing solutions tailored to your unique needs",
+  "home_h2-3": "Fast Delivery",
+  "home_p4": "We ensure quick turnaround times without compromising on quality",
+  "home_h2-4": "Ready to Start Your Project",
+  "home_a-2": "Contact Us",
+
   "ABOUT": "About",
+  "about_h1": "About 3D Print Lab",
+  "about_p-1": "At 3D Print Lab, we are dedicated to providing top-quality 3D printing services for a wide range of industries. Our mission is to bring your ideas to life with precision and excellence",
+
   "MATERIALS": "Materials",
+  "materials_h1": "Materials We Use",
+  "materials_p-1": "We offer a variety of high-quality materials to suit your 3D printing needs. Explore the different materials available and choose the best option for your project",
+
   "DELIVERY": "Delivery",
-  "CONTACT": "Contact"
+  "delivery_h1": "Our Delivery Services",
+  "delivery_p1-1": "We provide reliable and efficient delivery services to ensure your 3D printed items reach you on time and in perfect condition",
+
+  "CONTACT": "Contact",
+  "contact_h1": "Contact Us",
+  "contact_p1-1": "We'd love to hear from you! Get in touch with us through any of the following methods",
+
+  "footer_p1-1": "3D Print Lab is a professional printing company that provides top-quality 3D printing services",
+  "footer_a-1": "Contact Us",
+  "footer_h3-1": "Company",
+  "footer_a-2": "Home",
+  "footer_a-3": "About",
+  "footer_a-4": "Materials",
+  "footer_h3-2": "Product",
+  "footer_a-5": "Delivery",
+  "footer_a-6": "Contact",
+  "footer_span-1": "Email",
+  "footer_span-2": "Phone",
+  "footer_span-3": "Address",
+  "footer_copy": "All rights reserved"
 }

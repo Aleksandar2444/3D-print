@@ -4,6 +4,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import * as emailjs from 'emailjs-com';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
     FooterComponent,
     ReactiveFormsModule,
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
