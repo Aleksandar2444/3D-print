@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, Inject, Input, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -10,6 +10,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-header',
@@ -25,14 +26,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TranslateModule,
     FormsModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  currentLang: string;
+  @Input() appComponent!: AppComponent;
 
+  currentLang: string;
   selectedLanguage: string = 'en';
 
   constructor(
@@ -41,7 +43,7 @@ export class HeaderComponent implements OnInit {
     private translate: TranslateService,
   ) {
     this.translate.addLangs(['en', 'mk']);
-    this.translate.setDefaultLang('en');
+    // this.translate.setDefaultLang('en');
     const browserLang = translate.getBrowserLang();
     this.currentLang = browserLang && (browserLang.match(/en|mk/) ? browserLang : 'en') || 'en';
     this.translate.use(this.currentLang);

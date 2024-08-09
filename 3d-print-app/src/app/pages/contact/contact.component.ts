@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import * as emailjs from 'emailjs-com';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -41,10 +42,10 @@ export class ContactComponent {
       };
 
       emailjs.send(
-        'service_homqrqt',
-        'template_b93sjdy',
+        environment.email.emailService,
+        environment.email.emailTemplateKey,
         templateParams,
-        'xyQj_GwDPmH3W3BVW'
+        environment.email.emailApiKey
       ).then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         this.contactForm.reset();
