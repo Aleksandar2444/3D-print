@@ -24,35 +24,35 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // First, get the IP address
-    this.ipService.getIpAddress().subscribe({
-      next: (res: any) => {
-        const ip = res.ip;
-        // Use the IP to get geolocation data
-        this.ipService.getGeolocation(ip).subscribe({
-          next: (location: any) => {
-            const countryCode = location.country_code
-            this.setLanguageBasedOnCountry(countryCode);
-          },
-          error: (error) => {
-            console.error('Geolocation error:', error);
-            this.setLanguageBasedOnCountry('en'); // Fallback to English
-          }
-        });
-      },
-      error: (error) => {
-        console.error('IP address error:', error);
-        this.setLanguageBasedOnCountry('en'); // Fallback to English
-      }
-    });
+    // this.ipService.getIpAddress().subscribe({
+    //   next: (res: any) => {
+    //     const ip = res.ip;
+    //     // Use the IP to get geolocation data
+    //     this.ipService.getGeolocation(ip).subscribe({
+    //       next: (location: any) => {
+    //         const countryCode = location.country_code
+    //         this.setLanguageBasedOnCountry(countryCode);
+    //       },
+    //       error: (error) => {
+    //         console.error('Geolocation error:', error);
+    //         this.setLanguageBasedOnCountry('en'); // Fallback to English
+    //       }
+    //     });
+    //   },
+    //   error: (error) => {
+    //     console.error('IP address error:', error);
+    //     this.setLanguageBasedOnCountry('en'); // Fallback to English
+    //   }
+    // });
   }
 
-  setLanguageBasedOnCountry(countryCode: string) {
-    if (countryCode === 'MK') {
-      this.translate.use('mk');
-      this.selectedLanguage = 'mk';
-    } else {
-      this.translate.use('en');
-      this.selectedLanguage = 'en';
-    }
-  }
+  // setLanguageBasedOnCountry(countryCode: string) {
+  //   if (countryCode === 'MK') {
+  //     this.translate.use('mk');
+  //     this.selectedLanguage = 'mk';
+  //   } else {
+  //     this.translate.use('en');
+  //     this.selectedLanguage = 'en';
+  //   }
+  // }
 }

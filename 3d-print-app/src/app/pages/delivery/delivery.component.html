@@ -415,10 +415,17 @@
       </div>
       <div class="delivery-details">
         <div class="delivery-time">
-          <h2>Delivery Time</h2>
-          <p>We offer fast turnaround times, typically delivering within 3-5 business days. Expedited shipping options are also available.</p>
+          <h2>{{ 'delivery_h2-1' | translate }}</h2>
+          <p>{{ 'delivery_p1-2' | translate }}.</p>
         </div>
-        <div class="delivery-places">
+        <div class="delivery-time">
+          <h2>{{ 'delivery_h2-2' | translate }}</h2>
+          <p>{{ 'delivery_p1-3' | translate }}.</p>
+          <p>{{ 'delivery_p1-4' | translate }}.</p>
+          <p>{{ 'delivery_p1-5' | translate }}.</p>
+          <p>{{ 'delivery_p1-6' | translate }}.</p>
+        </div>
+        <!-- <div class="delivery-places">
           <h2>Delivery Locations</h2>
           <p>We ship to all major cities and regions. International shipping is available for an additional fee. Contact us for more details on specific locations.</p>
         </div>
@@ -429,7 +436,11 @@
         <div class="delivery-shipping">
           <h2>Shipping Methods</h2>
           <p>We partner with trusted carriers to deliver your items safely. Choose from a range of shipping methods, including ground, air, and sea freight.</p>
-        </div>
+        </div> -->
+      </div>
+
+      <div class="cta-section">
+        <a (click)="naviagteToContact()" class="cta-button">{{ 'home_a-2' | translate }}</a>
       </div>
     </div>
   </section>

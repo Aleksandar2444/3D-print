@@ -1,6 +1,6 @@
 <mat-toolbar class="header-wrapper" [ngClass]="{'drawer-opened': drawer.opened}">
-  <div class="logo-wrapper" routerLink="/home" routerLinkActive="active">
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  <div class="logo-wrapper">
+    <svg routerLink="/home" routerLinkActive="active" version="1.0" xmlns="http://www.w3.org/2000/svg"
          width="100px" height="60px" viewBox="0 0 512.000000 512.000000"
          preserveAspectRatio="xMidYMid meet"
          class="logo" [ngClass]="{'logo-opened': drawer.opened}">
@@ -85,17 +85,14 @@
       </g>
     </svg>
 
-     <!-- Language dropdown menu -->
-     <!-- <div class="language-menu-mobile">
-       <select (change)="onLanguageChange($event)">
-        <option value="en">EN</option>
-        <option value="mk">MK</option>
-      </select>
-    </div> -->
+    <!-- Mobile Language Dropdown -->
     <div class="language-menu-mobile">
-      <select [(ngModel)]="appComponent.selectedLanguage" (change)="onLanguageChange($event)">
-        <option value="en">EN</option>
-        <option value="mk">MK</option>
+      <select
+        [(ngModel)]="appComponent.selectedLanguage"
+        (change)="onLanguageChange($event)"
+      >
+        <option value="en" [selected]="appComponent.selectedLanguage === 'en'">EN</option>
+        <option value="mk" [selected]="appComponent.selectedLanguage === 'mk'">MK</option>
       </select>
     </div>
   </div>
@@ -114,27 +111,24 @@
     <a routerLink="/contact" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
   </nav>
 
-  <!-- <div class="language-menu-desktop">
-    <select (change)="onLanguageChange($event)">
-     <option value="en">EN</option>
-     <option value="mk">MK</option>
-   </select>
- </div> -->
- <div class="language-menu-desktop">
-  <select [(ngModel)]="appComponent.selectedLanguage" (change)="onLanguageChange($event)">
-    <option value="en">EN</option>
-    <option value="mk">MK</option>
-  </select>
-</div>
+  <div class="language-menu-desktop">
+    <select
+      [(ngModel)]="appComponent.selectedLanguage"
+      (change)="onLanguageChange($event)"
+    >
+      <option value="en" [selected]="appComponent.selectedLanguage === 'en'">EN</option>
+      <option value="mk" [selected]="appComponent.selectedLanguage === 'mk'">MK</option>
+    </select>
+  </div>
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="over">
-    <a routerLink="/home" routerLinkActive="active" (click)="drawer.toggle()">Home</a>
-    <a routerLink="/about" routerLinkActive="active" (click)="drawer.toggle()">About</a>
-    <a routerLink="/materials" routerLinkActive="active" (click)="drawer.toggle()">Materials</a>
-    <a routerLink="/delivery" routerLinkActive="active" (click)="drawer.toggle()">Delivery</a>
-    <a routerLink="/contact" routerLinkActive="active" (click)="drawer.toggle()">Contact</a>
+    <a routerLink="/home" routerLinkActive="active" (click)="drawer.toggle()">{{ 'HOME' | translate }}</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="drawer.toggle()">{{ 'ABOUT' | translate }}</a>
+    <a routerLink="/materials" routerLinkActive="active" (click)="drawer.toggle()">{{ 'MATERIALS' | translate }}</a>
+    <a routerLink="/delivery" routerLinkActive="active" (click)="drawer.toggle()">{{ 'DELIVERY' | translate }}</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="drawer.toggle()">{{ 'CONTACT' | translate }}</a>
   </mat-drawer>
   <router-outlet></router-outlet>
 </mat-drawer-container>

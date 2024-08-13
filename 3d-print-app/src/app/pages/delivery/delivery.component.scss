@@ -26,12 +26,36 @@
     flex-direction: column;
     align-items: center;
 
+
     .delivery-photo {
       display: flex;
       flex-direction: row;
       img {
         width: 100px;
         height: 50px;
+      }
+    }
+
+    .cta-section {
+      padding: 40px 20px;
+
+      h2 {
+        font-size: 1.6em;
+        margin-bottom: 40px;
+      }
+
+      .cta-button {
+        background: #ff9800;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #e68900;
+        }
       }
     }
 
@@ -47,6 +71,7 @@
         width: 100%;
         margin-bottom: 20px;
         box-sizing: border-box;
+        text-align: start;
 
         h2 {
           font-size: 1.4em;

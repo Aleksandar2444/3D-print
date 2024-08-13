@@ -1,8 +1,8 @@
 <section class="home-wrapper">
   <div class="intro-section">
-    <h1>3D Print Lab</h1>
+    <h1>{{ 'home_h1' | translate }}.</h1>
     <p>{{ 'home_p1' | translate }}</p>
-    <a href="/about" class="learn-more-button">{{ 'home_a-1' | translate }}</a>
+    <a (click)="naviagteToAbout()" class="learn-more-button">{{ 'home_a-1' | translate }}</a>
   </div>
 
   <div class="features-section">
@@ -22,7 +22,7 @@
 
   <div class="cta-section">
     <h2>{{ 'home_h2-4' | translate }}?</h2>
-    <a href="/contact" class="cta-button">{{ 'home_a-2' | translate }}</a>
+    <a (click)="naviagteToContact()" class="cta-button">{{ 'home_a-2' | translate }}</a>
   </div>
 </section>
 <app-footer></app-footer>

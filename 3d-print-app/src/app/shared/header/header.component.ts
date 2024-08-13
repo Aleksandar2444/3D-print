@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, Input, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -43,9 +43,12 @@ export class HeaderComponent implements OnInit {
     private translate: TranslateService,
   ) {
     this.translate.addLangs(['en', 'mk']);
-    // this.translate.setDefaultLang('en');
-    const browserLang = translate.getBrowserLang();
+    this.translate.setDefaultLang('en');
+
+    const browserLang = this.translate.getBrowserLang();
     this.currentLang = browserLang && (browserLang.match(/en|mk/) ? browserLang : 'en') || 'en';
+    this.translate.use(this.currentLang);
+    this.currentLang = 'en';
     this.translate.use(this.currentLang);
   }
 
@@ -64,7 +67,10 @@ export class HeaderComponent implements OnInit {
     this.translate.use(lang);
   }
 
-  onLanguageChange(event: any): void {
-    this.switchLanguage(event.target.value);
+  onLanguageChange(event: Event): void {
+    event.preventDefault();
+    const selectedLang = (event.target as HTMLSelectElement).value;
+    this.translate.use(selectedLang);
+    this.appComponent.selectedLanguage = selectedLang;
   }
 }

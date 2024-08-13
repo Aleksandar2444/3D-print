@@ -5,17 +5,14 @@
   </div>
 
   <div class="materials-list">
-    <div class="material-item">
-      <h2>PLA</h2>
-      <p>PLA (Polylactic Acid) is a biodegradable thermoplastic derived from renewable resources. It is ideal for a wide range of applications due to its ease of use and vibrant colors.</p>
-    </div>
-    <div class="material-item">
-      <h2>ABS</h2>
-      <p>ABS (Acrylonitrile Butadiene Styrene) is a strong and durable thermoplastic. It is perfect for creating sturdy and long-lasting 3D prints, commonly used in automotive parts and toys.</p>
-    </div>
-    <div class="material-item">
-      <h2>PETG</h2>
-      <p>PETG (Polyethylene Terephthalate Glycol) combines the best properties of PLA and ABS. It offers excellent strength, flexibility, and chemical resistance, making it suitable for functional parts.</p>
+    <div class="material-item" *ngFor="let material of materials; let i = index">
+      <h2>{{ material.title }}</h2>
+      <p [class.expanded]="expandedIndex === i">
+        {{ expandedIndex === i ? (material.content | translate) + '.' : (material.content | translate | slice:0:152) + ' ...' }}
+      </p>
+      <button (click)="toggleMaterial(i)">
+        {{ (expandedIndex === i ? 'materials_btn-1' : 'materials_btn-2') | translate }}
+      </button>
     </div>
   </div>
 </section>

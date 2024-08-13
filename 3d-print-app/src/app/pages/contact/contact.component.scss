@@ -38,6 +38,7 @@
       width: 100%;
       margin-bottom: 20px;
       box-sizing: border-box;
+      text-align: start;
 
       h2 {
         font-size: 1.4em;
@@ -89,6 +90,7 @@
     margin-top: 20px;
 
     h2 {
+      text-align: start;
       font-size: 1.4em;
       margin-bottom: 20px;
     }
@@ -127,7 +129,6 @@
       transition: background 0.3s;
       font-size: 14px;
       border: none;
-      cursor: pointer;
 
       &:disabled {
         background-color: #cccccc;
