@@ -59,11 +59,16 @@
         }
       }
 
-      .social-media {
+      .social-icons-contact {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
+
+        a:first-child {
+          display: flex;
+          justify-content: center;
+          align-items: normal;
+        }
       }
     }
 
@@ -90,7 +95,7 @@
     margin-top: 20px;
 
     h2 {
-      text-align: start;
+      text-align: center;
       font-size: 1.4em;
       margin-bottom: 20px;
     }

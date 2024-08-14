@@ -1,10 +1,14 @@
 
 /* Default styles for mobile devices */
 .home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
   padding: 20px;
   text-align: center;
-  background: url('https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg') no-repeat center center;
+  background: url('https://images.ctfassets.net/u88mzfvth3b3/6n39b2eeA61CQQ4oQkfrFA/b2d75d5d1b730212f0812b511f2ec6c2/homepage.jpeg') no-repeat center center;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -18,11 +22,6 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
-  }
-
-  .intro-section {
-    padding: 20px;
-    margin-bottom: 20px;
   }
 
   .intro-section {
@@ -149,9 +148,17 @@
         width: 30%;
       }
     }
+
+    .intro-section {
+      width: 70%;
+    }
   }
 
   @media (min-width: 1200px) {
+    .intro-section {
+      width: 50%;
+    }
+
     .intro-section, .cta-section {
       padding: 80px 40px;
     }

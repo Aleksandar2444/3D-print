@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-materials',
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './materials.component.html',
   styleUrl: './materials.component.scss'
 })
-export class MaterialsComponent {
+export class MaterialsComponent implements OnInit {
   materials = [
     {
       title: 'PLA',
@@ -44,6 +45,34 @@ export class MaterialsComponent {
   ];
 
   expandedIndex: number | null = null;
+  sliceValue: number = 152;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) { }
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateSliceValue(window.innerWidth);
+      window.addEventListener('resize', this.onResize.bind(this));
+    }
+  }
+
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.removeEventListener('resize', this.onResize.bind(this));
+    }
+  }
+
+  onResize(event: any) {
+    this.updateSliceValue(event.target.innerWidth);
+  }
+
+  updateSliceValue(width: number) {
+    this.sliceValue = width >= 600 ? 315 : 152;
+  }
+
+  getSliceValue(): number {
+    return this.sliceValue;
+  }
 
   toggleMaterial(index: number) {
     this.expandedIndex = this.expandedIndex === index ? null : index;

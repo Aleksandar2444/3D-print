@@ -8,7 +8,7 @@
     <div class="material-item" *ngFor="let material of materials; let i = index">
       <h2>{{ material.title }}</h2>
       <p [class.expanded]="expandedIndex === i">
-        {{ expandedIndex === i ? (material.content | translate) + '.' : (material.content | translate | slice:0:152) + ' ...' }}
+        {{ expandedIndex === i ? (material.content | translate) + '.' : (material.content | translate | slice:0:getSliceValue()) + ' ...' }}
       </p>
       <button (click)="toggleMaterial(i)">
         {{ (expandedIndex === i ? 'materials_btn-1' : 'materials_btn-2') | translate }}
