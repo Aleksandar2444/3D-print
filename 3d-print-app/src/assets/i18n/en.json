@@ -1,6 +1,6 @@
 {
   "HOME": "Home",
-  "home_h1": "Welcome to 3DPrinting.MK, your trusted partner for 3D printing",
+  "home_h1": "Welcome to 3DPrinting.MK your trusted partner for 3D printing",
   "home_p1": "Your Gateway to High-Quality 3D Printing Services",
   "home_a-1": "Learn More",
   "home_h2-1": "Quality Prints",
@@ -21,7 +21,8 @@
   "about_p-3": "Prototyping: Fast and efficient prototyping of your products",
   "about_p-3-1": "Custom Manufacturing: Personalized manufacturing of parts and components",
   "about_h2-3": "Consultation and Design",
-  "about_p-4": "Professional support team at every step of the design and printing process. Top quality: We use state-of-the-art 3D printers and materials to achieve the highest quality standards",
+  "about_p-4": "Professional support team at every step of the design and printing process",
+  "about_p-5": "Top quality: We use state-of-the-art 3D printers and materials to achieve the highest quality standards",
 
   "MATERIALS": "Materials",
   "materials_h1": "Materials We Use",
