@@ -86,7 +86,7 @@
     </svg>
 
     <!-- Mobile Language Dropdown -->
-    <div class="language-menu-mobile">
+    <!-- <div class="language-menu-mobile">
       <select
         [(ngModel)]="appComponent.selectedLanguage"
         (change)="onLanguageChange($event)"
@@ -94,7 +94,7 @@
         <option value="en" [selected]="appComponent.selectedLanguage === 'en'">EN</option>
         <option value="mk" [selected]="appComponent.selectedLanguage === 'mk'">MK</option>
       </select>
-    </div>
+    </div> -->
   </div>
 
   <!-- Mobile View -->
@@ -111,7 +111,7 @@
     <a routerLink="/contact" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
   </nav>
 
-  <div class="language-menu-desktop">
+  <!-- <div class="language-menu-desktop">
     <select
       [(ngModel)]="appComponent.selectedLanguage"
       (change)="onLanguageChange($event)"
@@ -119,7 +119,7 @@
       <option value="en" [selected]="appComponent.selectedLanguage === 'en'">EN</option>
       <option value="mk" [selected]="appComponent.selectedLanguage === 'mk'">MK</option>
     </select>
-  </div>
+  </div> -->
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">
