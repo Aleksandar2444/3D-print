@@ -10,7 +10,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AppComponent } from '../../app.component';
+// import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-header',
@@ -32,7 +32,7 @@ import { AppComponent } from '../../app.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  @Input() appComponent!: AppComponent;
+  // @Input() appComponent!: AppComponent;
 
   currentLang: string;
   selectedLanguage: string = 'en';
@@ -71,6 +71,6 @@ export class HeaderComponent implements OnInit {
     event.preventDefault();
     const selectedLang = (event.target as HTMLSelectElement).value;
     this.translate.use(selectedLang);
-    this.appComponent.selectedLanguage = selectedLang;
+    // this.appComponent.selectedLanguage = selectedLang;
   }
 }

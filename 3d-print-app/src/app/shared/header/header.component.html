@@ -1,6 +1,6 @@
 <mat-toolbar class="header-wrapper" [ngClass]="{'drawer-opened': drawer.opened}">
   <div class="logo-wrapper">
-    <svg routerLink="/home" routerLinkActive="active" version="1.0" xmlns="http://www.w3.org/2000/svg"
+    <svg routerLink="/" routerLinkActive="active" version="1.0" xmlns="http://www.w3.org/2000/svg"
          width="100px" height="60px" viewBox="0 0 512.000000 512.000000"
          preserveAspectRatio="xMidYMid meet"
          class="logo" [ngClass]="{'logo-opened': drawer.opened}">
@@ -104,7 +104,7 @@
 
   <!-- Desktop View -->
   <nav class="desktop-nav">
-    <a routerLink="/home" routerLinkActive="active">{{ 'HOME' | translate }}</a>
+    <a routerLink="/" routerLinkActive="active">{{ 'HOME' | translate }}</a>
     <a routerLink="/about" routerLinkActive="active">{{ 'ABOUT' | translate }}</a>
     <a routerLink="/materials" routerLinkActive="active">{{ 'MATERIALS' | translate }}</a>
     <a routerLink="/delivery" routerLinkActive="active">{{ 'DELIVERY' | translate }}</a>
@@ -124,7 +124,7 @@
 
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="over">
-    <a routerLink="/home" routerLinkActive="active" (click)="drawer.toggle()">{{ 'HOME' | translate }}</a>
+    <a routerLink="/" routerLinkActive="active" (click)="drawer.toggle()">{{ 'HOME' | translate }}</a>
     <a routerLink="/about" routerLinkActive="active" (click)="drawer.toggle()">{{ 'ABOUT' | translate }}</a>
     <a routerLink="/materials" routerLinkActive="active" (click)="drawer.toggle()">{{ 'MATERIALS' | translate }}</a>
     <a routerLink="/delivery" routerLinkActive="active" (click)="drawer.toggle()">{{ 'DELIVERY' | translate }}</a>
