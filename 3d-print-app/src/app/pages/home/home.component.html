@@ -1,8 +1,8 @@
-<section class="home-wrapper">
+<section id="home-section" class="home-wrapper">
   <div class="intro-section">
     <h1>{{ 'home_h1' | translate }}.</h1>
     <p>{{ 'home_p1' | translate }}</p>
-    <a (click)="naviagteToAbout()" class="learn-more-button">{{ 'home_a-1' | translate }}</a>
+    <a href="#about-section" (click)="scrollTo('about-section')" class="learn-more-button">{{ 'home_a-1' | translate }}</a>
   </div>
 
   <div class="features-section">
@@ -22,7 +22,21 @@
 
   <div class="cta-section">
     <h2>{{ 'home_h2-4' | translate }}?</h2>
-    <a (click)="naviagteToContact()" class="cta-button">{{ 'home_a-2' | translate }}</a>
+    <a href="#contact-section" (click)="scrollTo('contact-section')" class="cta-button">{{ 'home_a-2' | translate }}</a>
   </div>
 </section>
-<app-footer></app-footer>
+<div id="about-section">
+  <app-about></app-about>
+</div>
+<div id="materials-section">
+  <app-materials></app-materials>
+</div>
+<div id="delivery-section">
+  <app-delivery></app-delivery>
+</div>
+<div id="contact-section">
+  <app-contact></app-contact>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

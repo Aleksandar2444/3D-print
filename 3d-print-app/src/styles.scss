@@ -2,10 +2,14 @@
 
 .body {
   padding: 0;
-  margin: 0;
+  margin: 0 !important;
   font-family: Poppins,sans-serif;
   font-style: normal;
-  background: linear-gradient(135deg, rgb(0, 0, 19), rgb(36, 117, 90));
+  // background: linear-gradient(135deg, rgb(0, 0, 19), rgb(36, 117, 90));
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .mat-drawer-content {
@@ -22,7 +26,7 @@
 }
 
 h1, h2, h3, span {
-  background: linear-gradient(135deg, aquamarine, wheat);
+  background: linear-gradient(135deg, #42210b, #f7931e);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

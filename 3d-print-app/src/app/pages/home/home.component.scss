@@ -5,24 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   padding: 20px;
   text-align: center;
-  background: url('https://images.ctfassets.net/u88mzfvth3b3/6n39b2eeA61CQQ4oQkfrFA/b2d75d5d1b730212f0812b511f2ec6c2/homepage.jpeg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
+  background: linear-gradient(50deg, #f7931e 50%, white 50%);
 
   .intro-section {
     padding: 40px 20px;
@@ -39,7 +24,7 @@
     }
 
     .learn-more-button {
-      background: #ff9800;
+      background: #f7931e;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
@@ -48,7 +33,7 @@
       transition: background 0.3s;
 
       &:hover {
-        background: #e68900;
+        background: #b66d01;
       }
     }
   }
@@ -62,7 +47,7 @@
 
     .feature {
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(190, 113, 23, 0.5);
       padding: 20px;
       border-radius: 8px;
       width: 100%;
@@ -72,12 +57,11 @@
       h2 {
         font-size: 1.4em;
         margin-bottom: 10px;
-        color: white;
+        -webkit-text-fill-color: #42210b;
       }
 
       p {
         font-size: 1em;
-        color: white;
       }
     }
   }
@@ -88,19 +72,23 @@
     h2 {
       font-size: 1.6em;
       margin-bottom: 40px;
+      -webkit-text-fill-color:#42210b;
     }
 
     .cta-button {
-      background: #ff9800;
-      color: white;
+      background: white;
+      color: #d8801c;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
+      border: 1px solid rgb(66, 33, 11, 0.8);
       font-weight: bold;
       transition: background 0.3s;
 
       &:hover {
-        background: #e68900;
+        background: #744f37;
+        color: white;
+        border: 1px solid white;
       }
     }
   }
@@ -121,6 +109,8 @@
   }
 
   @media (min-width: 768px) {
+    background: linear-gradient(45deg, #f7931e 50%, white 50%);
+
     .intro-section {
       padding: 60px 30px;
 
@@ -143,6 +133,8 @@
   }
 
   @media (min-width: 992px) {
+    background: linear-gradient(33deg, #f7931e 50%, white 50%);
+
     .features-section {
       .feature {
         width: 30%;
@@ -170,5 +162,17 @@
     .intro-section p, .cta-section p {
       font-size: 1.5em;
     }
+  }
+
+  @media (min-width: 1400px) {
+    background: linear-gradient(26deg, #f7931e 50%, white 50%);
+  }
+
+  @media (min-width: 2000px) {
+    background: linear-gradient(23deg, #f7931e 50%, white 50%);
+  }
+
+  @media (min-width: 2400px) {
+    background: linear-gradient(19deg, #f7931e 50%, white 50%);
   }
 }
