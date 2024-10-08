@@ -15,11 +15,10 @@ import { Router } from '@angular/router';
 })
 export class DeliveryComponent {
 
-  constructor(
-    private readonly router: Router
-  ) { }
-
-  naviagteToContact() {
-    this.router.navigate(['/contact'], { queryParamsHandling: 'merge' });
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

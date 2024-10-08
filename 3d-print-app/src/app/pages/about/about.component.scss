@@ -1,11 +1,9 @@
 .about-wrapper {
-  color: #333;
-  padding: 20px;
+  padding: 50px 20px 0px 20px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 10px;
 
   .about-intro {
-    color: white;
     padding: 40px 20px;
     border-radius: 8px;
 
@@ -28,7 +26,7 @@
       border-radius: 8px;
       margin-bottom: 20px;
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(190, 113, 23, 0.5);
       width: 100%;
       box-sizing: border-box;
       text-align: start;
@@ -36,11 +34,11 @@
       h2 {
         font-size: 1.4em;
         margin-top: 10px;
+        -webkit-text-fill-color: #42210b;
       }
 
       p {
         font-size: 1em;
-        color: white;
       }
     }
   }
@@ -49,8 +47,8 @@
     .about-details {
       display: flex;
       flex-direction: column;
-      align-items: normal;
-      justify-content: space-evenly;
+      align-items: center;
+      justify-content: center;
 
       .about-mission,
       .about-vision,
@@ -87,7 +85,7 @@
       .about-team,
       .about-values,
       .about-history {
-        width: 60%;
+        width: 80%;
       }
     }
   }
@@ -98,6 +96,8 @@
     .about-details {
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 24px;
+      align-items: stretch;
 
       .about-mission,
       .about-vision,

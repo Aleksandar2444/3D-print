@@ -1,16 +1,16 @@
 <footer class="footer-wrapper">
   <div class="left-wrapper">
     <div class="footer-logo">
-      <img src="/assets/images/printer1.svg" alt="Company Logo">
+      <img (click)="scrollToSection('home-section')" src="/assets/images/footer-logo.jpg" alt="3dtara.jpg">
       <p>{{ 'footer_p1-1' | translate }}.</p>
       <div class="footer-cta-button">
-        <a (click)="naviagteToContact()">{{ 'footer_a-1' | translate }}</a>
+        <a (click)="scrollToSection('contact-section')">{{ 'footer_a-1' | translate }}</a>
       </div>
     </div>
 
     <div class="footer-social">
-      <a href="https://www.facebook.com/" target="_blank"><img src="/assets/images/fb-1.svg" alt="fb.svg"></a>
-      <a href="https://www.instagram.com/3dprinting.mk/" target="_blank"><img src="/assets/images/insta-1.svg" alt="ig.svg"></a>
+      <a href="https://www.facebook.com/3dtara3dprintingservice/" target="_blank"><img src="/assets/images/fb-1.svg" alt="fb.svg"></a>
+      <a href="https://www.instagram.com/3dtara3dprintingservice/" target="_blank"><img src="/assets/images/insta-1.svg" alt="ig.svg"></a>
       <a href="https://www.linkedin.com/in/boris-p-06842925a/" target="_blank"><img src="/assets/images/linked-1.svg" alt="li.svg"></a>
     </div>
   </div>
@@ -19,26 +19,26 @@
     <div class="company">
       <h3>{{ 'footer_h3-1' | translate }}</h3>
       <ul>
-        <li><a (click)="naviagteToHome()">{{ 'footer_a-2' | translate }}</a></li>
-        <li><a (click)="naviagteToAbout()">{{ 'footer_a-3' | translate }}</a></li>
-        <li><a (click)="naviagteToMaterials()">{{ 'footer_a-4' | translate }}</a></li>
+        <li><a (click)="scrollToSection('home-section')">{{ 'footer_a-2' | translate }}</a></li>
+        <li><a (click)="scrollToSection('about-section')">{{ 'footer_a-3' | translate }}</a></li>
+        <li><a (click)="scrollToSection('materials-section')">{{ 'footer_a-4' | translate }}</a></li>
       </ul>
     </div>
     <div class="product">
       <h3>{{ 'footer_h3-2' | translate }}</h3>
       <ul>
-        <li><a (click)="naviagteToDelivery()">{{ 'footer_a-5' | translate }}</a></li>
-        <li><a (click)="naviagteToContact()">{{ 'footer_a-6' | translate }}</a></li>
+        <li><a (click)="scrollToSection('delivery-section')">{{ 'footer_a-5' | translate }}</a></li>
+        <li><a (click)="scrollToSection('contact-section')">{{ 'footer_a-6' | translate }}</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-contact">
-    <p><span>{{ 'footer_span-1' | translate }}:</span> <a href="mailto:info@yourcompany.com"> info&#64;3dprinting.mk</a></p>
+    <p><span>{{ 'footer_span-1' | translate }}:</span> <a href="mailto:info@3dtara.com"> info&#64;3dtara.com</a></p>
     <p><span>{{ 'footer_span-2' | translate }}:</span> <a href="tel:+38972653175"> +389 72 653 175</a></p>
   </div>
 
   <div class="footer-copy">
-    <p>&copy; 2023-{{date}} 3DPrinting.MK. {{ 'footer_copy' | translate }}.</p>
+    <p>&copy; 2023-{{date}} 3DTara. {{ 'footer_copy' | translate }}.</p>
   </div>
 </footer>

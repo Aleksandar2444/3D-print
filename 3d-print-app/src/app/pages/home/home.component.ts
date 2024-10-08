@@ -23,15 +23,10 @@ import { ContactComponent } from "../contact/contact.component";
 })
 export class HomeComponent {
 
-  constructor(
-    private readonly router: Router
-  ) { }
-
-  naviagteToContact() {
-    this.router.navigate(['/contact'], { queryParamsHandling: 'merge' });
-  }
-
-  naviagteToAbout() {
-    this.router.navigate(['/about'], { queryParamsHandling: 'merge' });
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

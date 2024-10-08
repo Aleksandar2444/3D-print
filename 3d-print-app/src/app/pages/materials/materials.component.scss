@@ -1,11 +1,13 @@
 .materials-wrapper {
-  color: #333;
-  padding: 20px;
+  background-color: whitesmoke;
+  padding: 40px 20px 0px 20px;
   text-align: center;
-  margin-top: 60px;
+  background:
+  linear-gradient(to bottom left, transparent 50%, white 50%, white 100%, transparent 100%),
+  linear-gradient(to top left, transparent 50%, white 50%, white 100%, transparent 100%),
+  #f7931e;
 
   .materials-intro {
-    color: white;
     padding: 40px 20px;
     border-radius: 8px;
 
@@ -27,7 +29,7 @@
 
     .material-item {
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(190, 113, 23, 0.5);
       padding: 20px;
       border-radius: 8px;
       width: 100%;
@@ -38,11 +40,11 @@
       h2 {
         font-size: 1.4em;
         margin-top: 10px;
+        -webkit-text-fill-color: #42210b;
       }
 
       p {
         font-size: 1em;
-        color: white;
         max-height: 8em; /* Adjust this value to show only 3-4 lines initially */
         overflow: hidden;
         text-overflow: ellipsis;
@@ -56,7 +58,7 @@
         button {
         background: transparent;
         border: none;
-        background: linear-gradient(135deg, aquamarine, wheat);
+        background: linear-gradient(135deg, #42210b, #f7931e);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor: pointer;

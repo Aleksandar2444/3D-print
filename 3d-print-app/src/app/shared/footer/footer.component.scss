@@ -1,12 +1,11 @@
 .footer-wrapper {
-  background: #0e1217;
-  color: white;
   padding: 34px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #42210b;
 
   .footer-logo {
     display: flex;
@@ -14,15 +13,17 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    cursor: pointer;
 
     img {
-      max-width: 150px;
-      height: auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
     }
 
     p {
       text-align: start;
-      color: #ababab;
+      color: white;
     }
 
     .footer-cta-button {
@@ -53,6 +54,10 @@
     justify-content: flex-start;
     width: 100%;
 
+    h3 {
+      -webkit-text-fill-color:#f7931e;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -66,6 +71,7 @@
     }
 
     .company, .product {
+
       ul {
         display: flex;
         flex-direction: column;
@@ -88,6 +94,10 @@
     justify-content: flex-start;
     text-align: start;
     width: 100%;
+
+    span {
+      -webkit-text-fill-color:#f7931e;
+    }
 
     p {
       margin: 5px 0;
@@ -116,6 +126,10 @@
       color: #ababab;
       text-decoration: none;
 
+      img {
+        filter: invert(100) brightness(150%);
+      }
+
       &:first-child img {
         height: 50px;
       }
@@ -130,6 +144,7 @@
     p {
       font-size: 0.8em;
       margin: 0;
+      color: #ababab;
     }
   }
 
