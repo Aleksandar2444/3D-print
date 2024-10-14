@@ -117,6 +117,10 @@
         align-items: center;
         justify-content: center;
       }
+
+      a:last-child {
+        padding: 0 25px;
+      }
     }
   }
 
