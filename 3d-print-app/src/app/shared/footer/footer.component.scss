@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #42210b;
+  background: url('/assets/images/footer-bg.jpg') no-repeat center center;
+  background-size: cover;
 
   .footer-logo {
     display: flex;
