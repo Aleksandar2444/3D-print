@@ -139,6 +139,10 @@
         text-decoration: underline;
       }
     }
+
+    a:last-child {
+      padding: 0 30px;
+    }
   }
 
   .footer-copy {
