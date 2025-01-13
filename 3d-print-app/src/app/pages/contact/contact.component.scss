@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   padding: 50px 20px 20px 20px;
-  background: radial-gradient( circle at 50% 79%, #F7931E 260px, transparent 15px), white;
 
   .contact-intro {
     padding: 10px 20px;
@@ -28,7 +27,7 @@
     gap: 10px;
 
     .contact-item {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(190, 113, 23, 0.5);
       padding: 20px;
       padding-top: 0;
@@ -40,7 +39,7 @@
       h2 {
         font-size: 1.4em;
         margin-bottom: 10px;
-      -webkit-text-fill-color: #42210b;
+        -webkit-text-fill-color: #42210b;
       }
 
       p {
@@ -97,6 +96,7 @@
 
   .contact-form {
     padding: 20px;
+    border: 1px solid rgba(190, 113, 23, 0.5);
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -119,20 +119,25 @@
         color: #42210b;
       }
 
-      input, textarea {
+      input,
+      textarea {
         // width: -webkit-fill-available;
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        box-sizing: border-box; /* Include padding and border in width calculation */
+        box-sizing: border-box;
+        /* Include padding and border in width calculation */
       }
 
       textarea {
-        resize: vertical; /* Allow only vertical resizing */
-        max-width: 100%; /* Ensure it doesn’t exceed the width of the container */
+        resize: vertical;
+        /* Allow only vertical resizing */
+        max-width: 100%;
+        /* Ensure it doesn’t exceed the width of the container */
         max-height: 150px;
-        overflow: auto; /* Add scrollbars if needed */
+        overflow: auto;
+        /* Add scrollbars if needed */
       }
 
       .error {
@@ -201,7 +206,6 @@
 
     .contact-form {
       form {
-        border: 1px solid #42210b;
         border-radius: 8px;
         padding: 25px;
 
@@ -218,9 +222,11 @@
       justify-content: center;
       align-items: center;
     }
+
     .contact-details {
       justify-content: center;
       width: 100%;
+
       .contact-item {
         max-width: 430px;
       }
@@ -232,7 +238,6 @@
   }
 
   @media (min-width: 1200px) {
-    background: radial-gradient( circle at 50% 70%, #F7931E 260px, transparent 15px), white;
 
     .contact-intro {
       padding: 80px 40px;
@@ -267,6 +272,7 @@
         padding: 0;
 
         max-width: 780px;
+
         form {
           padding: 25px;
         }

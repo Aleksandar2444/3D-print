@@ -1,4 +1,3 @@
-
 /* Default styles for mobile devices */
 .home-wrapper {
   display: flex;
@@ -7,7 +6,27 @@
   align-items: center;
   padding: 20px;
   text-align: center;
-  background: linear-gradient(50deg, #f7931e 50%, white 50%);
+  position: relative;
+  // if we remove z-index we can manipulate background opacity
+  z-index: 1;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, -0.5));
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('/assets/images/hex-1.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+    transform: translate(-50%, 0%) rotate(90deg);
+    width: 250%;
+    height: 30%;
+  }
 
   .intro-section {
     padding: 40px 20px;
@@ -46,7 +65,7 @@
     margin-bottom: 0px;
 
     .feature {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(190, 113, 23, 0.5);
       padding: 20px;
       border-radius: 8px;
@@ -72,7 +91,7 @@
     h2 {
       font-size: 1.6em;
       margin-bottom: 40px;
-      -webkit-text-fill-color:#42210b;
+      -webkit-text-fill-color: #42210b;
     }
 
     .cta-button {
@@ -93,7 +112,36 @@
     }
   }
 
+  @media (min-width: 378px) {
+    &::before {
+      transform: translate(-47%, 4%) rotate(90deg);
+    }
+  }
+
+  @media (min-width: 445px) {
+    &::before {
+      transform: translate(-50%, 10%) rotate(90deg);
+    }
+  }
+
+  @media (min-width: 478px) {
+    &::before {
+      height: 32%;
+    }
+  }
+
+  @media (min-width: 532px) {
+    &::before {
+      height: 36%;
+    }
+  }
+
   @media (min-width: 600px) {
+    &::before {
+      transform: translate(-60%, -40%) rotate(0deg);
+      height: 50%;
+    }
+
     .features-section {
       flex-direction: row;
       flex-wrap: wrap;
@@ -109,7 +157,10 @@
   }
 
   @media (min-width: 768px) {
-    background: linear-gradient(45deg, #f7931e 50%, white 50%);
+    &::before {
+      transform: translate(-50%, -50%) rotate(0deg);
+      height: 30%;
+    }
 
     .intro-section {
       padding: 60px 30px;
@@ -132,8 +183,25 @@
     }
   }
 
+  @media (min-width: 842px) {
+    &::before {
+      transform: translate(-50%, -44%) rotate(0deg);
+      height: 34%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    &::before {
+      transform: translate(-50%, -37%) rotate(0deg);
+      height: 40%;
+    }
+  }
+
   @media (min-width: 992px) {
-    background: linear-gradient(33deg, #f7931e 50%, white 50%);
+    &::before {
+      transform: translate(-50%, -20%) rotate(0deg);
+      height: 45%;
+    }
 
     .features-section {
       .feature {
@@ -147,32 +215,64 @@
   }
 
   @media (min-width: 1200px) {
+    &::before {
+      transform: translate(-50%, -5%) rotate(0deg);
+      height: 50%;
+    }
+
     .intro-section {
       width: 50%;
     }
 
-    .intro-section, .cta-section {
+    .intro-section,
+    .cta-section {
       padding: 80px 40px;
     }
 
-    .intro-section h1, .cta-section h2 {
+    .intro-section h1,
+    .cta-section h2 {
       font-size: 2.5em;
     }
 
-    .intro-section p, .cta-section p {
+    .intro-section p,
+    .cta-section p {
       font-size: 1.5em;
     }
   }
 
+  @media (min-width: 1296px) {
+    &::before {
+      transform: translate(-50%, -11%) rotate(0deg);
+      height: 55%;
+    }
+  }
+
   @media (min-width: 1400px) {
-    background: linear-gradient(26deg, #f7931e 50%, white 50%);
+    &::before {
+      transform: translate(-50%, -12%) rotate(0deg);
+      height: 60%;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    &::before {
+      transform: translate(-50%, -11%) rotate(0deg);
+      height: 65%;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    &::before {
+      transform: translate(-50%, -9%) rotate(0deg);
+      height: 75%;
+    }
   }
 
   @media (min-width: 2000px) {
-    background: linear-gradient(23deg, #f7931e 50%, white 50%);
+    // background: linear-gradient(23deg, #f7931e 50%, white 50%);
   }
 
   @media (min-width: 2400px) {
-    background: linear-gradient(19deg, #f7931e 50%, white 50%);
+    // background: linear-gradient(19deg, #f7931e 50%, white 50%);
   }
 }

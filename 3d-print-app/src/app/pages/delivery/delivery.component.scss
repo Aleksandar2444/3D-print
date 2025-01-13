@@ -5,10 +5,26 @@
   align-items: center;
   padding: 40px 20px 38px 20px;
   text-align: center;
-  background: radial-gradient( circle at 70% 40%, #f7931e 120px, transparent 15px),
-              radial-gradient( circle at 10% 60%, #f7931e 90px, transparent 15px),
-              radial-gradient( circle at 50% 92.7%, #f7931e 90px, transparent 15px),
-              white;
+  z-index: 1;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, -0.5));
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('/assets/images/hex-1.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+    transform: translate(-50%, 75%) rotate(90deg);
+    width: 250%;
+    height: 30%;
+  }
 
   .delivery-intro {
     padding: 40px 20px;
@@ -74,7 +90,7 @@
     .delivery-details {
       .delivery-time {
         position: relative;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(190, 113, 23, 0.5);
         padding: 20px;
         border-radius: 8px;
@@ -120,11 +136,8 @@
         }
       }
 
-      .delivery-time,
-      .delivery-places,
-      .delivery-cargo,
-      .delivery-shipping {
-        background: rgba(255, 255, 255, 0.1);
+      .delivery-time {
+        background: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(190, 113, 23, 0.5);
         padding: 20px;
         border-radius: 8px;
@@ -136,7 +149,7 @@
         h2 {
           font-size: 1.4em;
           margin-top: 10px;
-        -webkit-text-fill-color: #42210b;
+          -webkit-text-fill-color: #42210b;
         }
 
         p {
@@ -153,22 +166,31 @@
     }
   }
 
+  @media (min-width: 450px) {
+    &::before {
+      transform: translate(-50%, 40%) rotate(90deg);
+      height: 40%;
+    }
+  }
+
   @media (min-width: 600px) {
-    background: radial-gradient( circle at 73% 40%, #f7931e 155px, transparent 15px),
-      radial-gradient( circle at 10% 60%, #f7931e 90px, transparent 15px),
-      radial-gradient( circle at 50% 96%, #f7931e 120px, transparent 15px),
-      white;
+    &::before {
+      transform: translate(-50%, 20%) rotate(90deg);
+    }
 
     .delivery-content {
       .delivery-photo {
         img {
           margin-bottom: 30px;
         }
+
         svg {
           filter: none;
         }
       }
+
       .delivery-details {
+
         .delivery-time,
         .delivery-places,
         .delivery-cargo,
@@ -225,13 +247,12 @@
   }
 
   @media (min-width: 992px) {
-    background:
-    radial-gradient( circle at 73% 40%, #f7931e 155px, transparent 15px),
-    radial-gradient( circle at 10% 60%, #f7931e 90px, transparent 15px),
-    radial-gradient( circle at 50% 89%, #f7931e 110px, transparent 15px),
-    white;
+    &::before {
+      transform: translate(-50%, -45%) rotate(0deg);
+    }
 
     padding-bottom: 100px;
+
     .delivery-content {
       .delivery-photo {
         width: 48%;
@@ -239,16 +260,14 @@
     }
 
     .delivery-intro {
-     width: 70%;
+      width: 70%;
     }
   }
 
   @media (min-width: 1200px) {
-    background:
-    radial-gradient( circle at 73% 40%, #f7931e 155px, transparent 15px),
-    radial-gradient( circle at 10% 60%, #f7931e 90px, transparent 15px),
-    radial-gradient( circle at 50% 89.5%, #f7931e 120px, transparent 15px),
-    white;
+    &::before {
+      transform: translate(-50%, -30%) rotate(0deg);
+    }
 
     .delivery-intro {
       padding: 80px 40px;
@@ -267,6 +286,34 @@
       .delivery-photo {
         width: 45%;
       }
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &::before {
+      transform: translate(-50%, -30%) rotate(0deg);
+      height: 42%;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    &::before {
+      transform: translate(-50%, -20%) rotate(0deg);
+      height: 50%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &::before {
+      transform: translate(-50%, -30%) rotate(0deg);
+      height: 56%;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    &::before {
+      transform: translate(-50%, -30%) rotate(0deg);
+      height: 60%;
     }
   }
 }
