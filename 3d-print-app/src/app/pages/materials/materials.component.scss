@@ -1,8 +1,11 @@
 .materials-wrapper {
-  background-color: white;
+  background-color: whitesmoke;
+  background:
+    linear-gradient(to bottom left, transparent 50%, white 50%, white 100%, transparent 100%),
+    linear-gradient(to top left, transparent 50%, white 50%, white 100%, transparent 100%),
+    #f7931e;
   padding: 40px 20px 0px 20px;
   text-align: center;
-  overflow: hidden;
 
   .materials-intro {
     padding: 40px 20px;
@@ -46,54 +49,6 @@
         background: url('/assets/images/materials1-tara.jpg') no-repeat center center;
         background-size: contain;
         rotate: 50deg;
-      }
-
-      &:nth-child(2)::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-image: url('/assets/images/hex-1.jpg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: -1;
-        opacity: 0.9;
-        transform: translate(-50%, 30%) rotate(0deg);
-        width: 250%;
-        height: 120%;
-      }
-
-      &:nth-child(3)::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-image: url('/assets/images/hex-1.jpg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: space;
-        z-index: -1;
-        opacity: 0.9;
-        transform: translate(-50%, 75%) rotate(0deg);
-        width: 250%;
-        height: 60%;
-      }
-
-      &:nth-child(4)::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-image: url('/assets/images/hex-1.jpg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: -1;
-        opacity: 0.9;
-        transform: translate(-50%, 25%) rotate(0deg);
-        width: 250%;
-        height: 110%;
       }
 
       &:last-child::before {
@@ -144,18 +99,6 @@
     }
   }
 
-  @media (min-width: 450px) {
-    .materials-list {
-      .material-item {
-
-        &:nth-child(2)::before,
-        &:nth-child(3)::before {
-          width: 200%;
-        }
-      }
-    }
-  }
-
   @media (min-width: 600px) {
     .materials-list {
       .material-item {
@@ -189,43 +132,12 @@
 
       .material-item {
         padding: 30px;
-
-        &:nth-child(2)::before {
-          transform: translate(-50%, 10%) rotate(0deg);
-          width: 205%;
-          background-repeat: no-repeat;
-          height: 150%;
-        }
-
-        &:nth-child(3)::before {
-          transform: translate(-50%, 60%) rotate(0deg);
-          width: 205%;
-          background-repeat: space;
-          height: 80%;
-        }
-
-        &:nth-child(4)::before {
-          transform: translate(-50%, 0%) rotate(0deg);
-          width: 205%;
-          background-repeat: no-repeat;
-          height: 150%;
-        }
       }
     }
   }
 
   @media (min-width: 992px) {
     padding-bottom: 100px;
-
-    .materials-list {
-      .material-item {
-
-        &:nth-child(2)::before {
-          transform: translate(-50%, 15%) rotate(0deg);
-          height: 150%;
-        }
-      }
-    }
   }
 
   @media (min-width: 1200px) {
@@ -244,34 +156,6 @@
     .materials-list {
       .material-item {
         width: 60%;
-
-        &:nth-child(2)::before {
-          transform: translate(-50%, 10%) rotate(0deg);
-          height: 200%;
-        }
-
-        &:nth-child(4)::before {
-          transform: translate(-50%, -10%) rotate(0deg);
-          height: 140%;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .materials-list {
-      .material-item {
-        width: 60%;
-
-        &:nth-child(2)::before {
-          transform: translate(-50%, 5%) rotate(0deg);
-          height: 240%;
-        }
-
-        &:nth-child(4)::before {
-          transform: translate(-50%, -10%) rotate(0deg);
-          height: 200%;
-        }
       }
     }
   }

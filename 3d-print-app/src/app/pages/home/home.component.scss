@@ -6,27 +6,7 @@
   align-items: center;
   padding: 20px;
   text-align: center;
-  position: relative;
-  // if we remove z-index we can manipulate background opacity
-  z-index: 1;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, -0.5));
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-image: url('/assets/images/hex-1.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.9;
-    transform: translate(-50%, 0%) rotate(90deg);
-    width: 250%;
-    height: 30%;
-  }
+  background: linear-gradient(50deg, #f7931e 50%, white 50%);
 
   .intro-section {
     padding: 40px 20px;
@@ -112,36 +92,7 @@
     }
   }
 
-  @media (min-width: 378px) {
-    &::before {
-      transform: translate(-47%, 4%) rotate(90deg);
-    }
-  }
-
-  @media (min-width: 445px) {
-    &::before {
-      transform: translate(-50%, 10%) rotate(90deg);
-    }
-  }
-
-  @media (min-width: 478px) {
-    &::before {
-      height: 32%;
-    }
-  }
-
-  @media (min-width: 532px) {
-    &::before {
-      height: 36%;
-    }
-  }
-
   @media (min-width: 600px) {
-    &::before {
-      transform: translate(-60%, -40%) rotate(0deg);
-      height: 50%;
-    }
-
     .features-section {
       flex-direction: row;
       flex-wrap: wrap;
@@ -157,10 +108,7 @@
   }
 
   @media (min-width: 768px) {
-    &::before {
-      transform: translate(-50%, -50%) rotate(0deg);
-      height: 30%;
-    }
+    background: linear-gradient(45deg, #f7931e 50%, white 50%);
 
     .intro-section {
       padding: 60px 30px;
@@ -183,25 +131,8 @@
     }
   }
 
-  @media (min-width: 842px) {
-    &::before {
-      transform: translate(-50%, -44%) rotate(0deg);
-      height: 34%;
-    }
-  }
-
-  @media (min-width: 900px) {
-    &::before {
-      transform: translate(-50%, -37%) rotate(0deg);
-      height: 40%;
-    }
-  }
-
   @media (min-width: 992px) {
-    &::before {
-      transform: translate(-50%, -20%) rotate(0deg);
-      height: 45%;
-    }
+    background: linear-gradient(33deg, #f7931e 50%, white 50%);
 
     .features-section {
       .feature {
@@ -215,11 +146,6 @@
   }
 
   @media (min-width: 1200px) {
-    &::before {
-      transform: translate(-50%, -5%) rotate(0deg);
-      height: 50%;
-    }
-
     .intro-section {
       width: 50%;
     }
@@ -240,39 +166,15 @@
     }
   }
 
-  @media (min-width: 1296px) {
-    &::before {
-      transform: translate(-50%, -11%) rotate(0deg);
-      height: 55%;
-    }
-  }
-
   @media (min-width: 1400px) {
-    &::before {
-      transform: translate(-50%, -12%) rotate(0deg);
-      height: 60%;
-    }
-  }
-
-  @media (min-width: 1500px) {
-    &::before {
-      transform: translate(-50%, -11%) rotate(0deg);
-      height: 65%;
-    }
-  }
-
-  @media (min-width: 1900px) {
-    &::before {
-      transform: translate(-50%, -9%) rotate(0deg);
-      height: 75%;
-    }
+    background: linear-gradient(26deg, #f7931e 50%, white 50%);
   }
 
   @media (min-width: 2000px) {
-    // background: linear-gradient(23deg, #f7931e 50%, white 50%);
+    background: linear-gradient(23deg, #f7931e 50%, white 50%);
   }
 
   @media (min-width: 2400px) {
-    // background: linear-gradient(19deg, #f7931e 50%, white 50%);
+    background: linear-gradient(19deg, #f7931e 50%, white 50%);
   }
 }
