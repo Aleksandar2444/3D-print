@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px 20px 20px 20px;
+  background: radial-gradient(circle at 50% 79%, #F7931E 260px, transparent 15px), white;
 
   .contact-intro {
     padding: 10px 20px;
@@ -96,7 +97,6 @@
 
   .contact-form {
     padding: 20px;
-    border: 1px solid rgba(190, 113, 23, 0.5);
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -121,13 +121,11 @@
 
       input,
       textarea {
-        // width: -webkit-fill-available;
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        /* Include padding and border in width calculation */
       }
 
       textarea {
@@ -206,6 +204,7 @@
 
     .contact-form {
       form {
+        border: 1px solid #42210b;
         border-radius: 8px;
         padding: 25px;
 
@@ -238,6 +237,7 @@
   }
 
   @media (min-width: 1200px) {
+    background: radial-gradient(circle at 50% 70%, #F7931E 260px, transparent 15px), white;
 
     .contact-intro {
       padding: 80px 40px;
