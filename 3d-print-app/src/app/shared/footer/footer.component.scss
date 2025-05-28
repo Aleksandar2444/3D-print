@@ -56,7 +56,7 @@
     width: 100%;
 
     h3 {
-      -webkit-text-fill-color:#f7931e;
+      -webkit-text-fill-color: #f7931e;
     }
 
     ul {
@@ -71,7 +71,8 @@
       }
     }
 
-    .company, .product {
+    .company,
+    .product {
 
       ul {
         display: flex;
@@ -97,7 +98,7 @@
     width: 100%;
 
     span {
-      -webkit-text-fill-color:#f7931e;
+      -webkit-text-fill-color: #f7931e;
     }
 
     p {
@@ -116,33 +117,88 @@
   }
 
   .footer-social {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: normal;
+    gap: 15px;
     width: 100%;
 
-    a {
-      color: #ababab;
-      text-decoration: none;
+    .top,
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
 
-      img {
-        filter: invert(100) brightness(150%);
-      }
+      a {
+        color: #ababab;
+        text-decoration: none;
 
-      &:first-child img {
-        height: 50px;
-      }
-
-      &:hover {
-        text-decoration: underline;
+        img {
+          filter: invert(100) brightness(150%);
+          width: 50px;
+          height: 50px;
+        }
       }
     }
 
-    a:last-child {
-      padding: 0 30px;
+    .top {
+      a {
+        &:first-child img {
+          height: 60px;
+        }
+
+        &:nth-child(2) img {
+          height: 49px;
+        }
+
+        &:nth-child(3) img {
+          height: 52px;
+        }
+      }
     }
+
+    .bottom {
+      align-items: anchor-center;
+
+      a {
+        &:first-child img {
+          height: 42px;
+          padding-left: 3px;
+        }
+
+        &:nth-child(2) img {
+          height: 49px;
+        }
+
+        &:nth-child(3) img {
+          height: 60px;
+          width: 58px;
+        }
+      }
+    }
+
+    // a {
+    //   color: #ababab;
+    //   text-decoration: none;
+
+    //   img {
+    //     filter: invert(100) brightness(150%);
+    //   }
+
+    //   &:first-child img {
+    //     height: 50px;
+    //   }
+
+    //   &:hover {
+    //     text-decoration: underline;
+    //   }
+    // }
+
+    // a:last-child {
+    //   padding: 0 30px;
+    // }
   }
 
   .footer-copy {
@@ -181,11 +237,20 @@
       justify-content: flex-end;
       gap: 80px;
       flex-direction: row;
-  }
+    }
 
     .footer-contact p,
-    .footer-social a {
-      font-size: 1.1em;
+    .footer-social {
+
+      .top,
+      .bottom {
+        justify-content: flex-start;
+        gap: 40px;
+      }
+
+      a {
+        font-size: 1.1em;
+      }
     }
   }
 
