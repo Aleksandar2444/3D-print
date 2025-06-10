@@ -245,7 +245,14 @@
       .top,
       .bottom {
         justify-content: flex-start;
+      }
+
+      .top {
         gap: 40px;
+      }
+
+      .bottom {
+        gap: 36px;
       }
 
       a {
